@@ -19,6 +19,17 @@ zokou({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, zk
         }
     } catch (error) {
         console.error(error);
-        return await repondre('_Une erreur s\'est produite :(_');
-    }
-});
+        return await repondre('_Une erreur s\'est produite :(_'){
+ contextInfo: {
+        externalAdReply: {
+          title: "Error Fetching Bible Passage",
+          body: "Please try again later.",
+          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", // Replace with a suitable thumbnail URL
+          sourceUrl:  'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
+          mediaType: 1,
+          showAdAttribution: true,
+        },
+      },
+    });
+  }
+});   
