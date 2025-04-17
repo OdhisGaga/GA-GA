@@ -19,7 +19,7 @@ zokou({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, zk
         }
     } catch (error) {
         console.error(error);
-        return await repondre('_Une erreur s\'est produite ,{
+        return await repondre('_Une erreur s\'est produite ,(_');{
      contextInfo: {
         externalAdReply: {
           title: "Error Fetching Fancy Passage",
