@@ -1,7 +1,7 @@
 const { zokou } = require('../framework/zokou');
 const traduire = require('../framework/traduction');
 
-zokou({ nomCom: 'citation', categorie: 'Fun' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'quote', categorie: 'FUN 📱' }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, verifGroupe, arg } = commandeOptions;
   if (!verifGroupe) {
     repondre('Commande réservée au groupe uniquement');
@@ -14,14 +14,14 @@ zokou({ nomCom: 'citation', categorie: 'Fun' }, async (dest, zk, commandeOptions
         .then((response) => response.json())
         .then(async (quote) => {
           repondre(`╔══════════════════════════╗
-║   Zokou-md               ║
+║   𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒              ║
 ╚══════════════════════════╝
 
 🎬 Anime: ${quote.anime}
 👤 Personnage: ${quote.character}
 💬 Citation: ${await traduire(quote.quote, { to: 'fr' })}
 
-Propulsé par Zokou-MD`);
+𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒`);
         });
     } catch (e) {
       repondre('Erreur lors de la génération de la citation : ' + e.message);
@@ -34,14 +34,14 @@ Propulsé par Zokou-MD`);
         .then((response) => response.json())
         .then(async (quote) => {
           repondre(`╔══════════════════════════╗
-║   Zokou-md               ║
+║   𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒              ║
 ╚══════════════════════════╝
 
 🎬 Anime: ${quote.anime}
 👤 Personnage: ${quote.character}
 💬 Citation: ${await traduire(quote.quote, { to: 'fr' })}
 
-Propulsé par Zokou-MD`);
+𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒`);
         });
     } catch (e) {
       repondre('Erreur lors de la génération de la citation : ' + e.message);
