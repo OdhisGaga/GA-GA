@@ -42,8 +42,7 @@ zokou({
   } catch (_0xa326ac) {
     console.error("Error fetching weather data:", _0xa326ac);
     await _0x1330dc("An error occurred while fetching the weather data. Please try again.");
-  }
-contextInfo: {
+        contextInfo: {
         externalAdReply: {
           title: "𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒",
           body: "Please try again later.",
