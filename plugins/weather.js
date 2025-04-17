@@ -41,7 +41,7 @@ zokou({
     await _0x1330dc("❄️ Weather in " + _0x27e01f + "\n\n🌡️ Temperature: " + _0x30fbdf + "°C\n🌡️ Feels Like: " + _0x300a6b + "°C\n🌡️ Min Temperature: " + _0x148686 + "°C\n🌡️ Max Temperature: " + _0x5b64cf + "°C\n📝 Description: " + _0x3949ce + "\n❄️ Humidity: " + _0x5f7b48 + "%\n🌀 Wind Speed: " + _0x597e97 + " m/s\n🌧️ Rain Volume (last hour): " + _0x31b3fa + " mm\n☁️ Cloudiness: " + _0x1c1c03 + "%\n🌄 Sunrise: " + _0x3e5533.toLocaleTimeString() + "\n🌅 Sunset: " + _0x1c8510.toLocaleTimeString() + "\n🌫️ Latitude: " + _0x117dd8.coord.lat + "\n🌪️ Longitude: " + _0x117dd8.coord.lon + "\n\n🗺 Country: " + _0x117dd8.sys.country + "\n\n> 𝙶𝚎𝚗𝚊𝚛𝚊𝚝𝚎𝚍 𝚋𝚢 𝚡𝚐𝚊𝚐𝚊 𝚋𝚘𝚝𝚜");
   } catch (_0xa326ac) {
     console.error("Error fetching weather data:", _0xa326ac);
-    await _0x1330dc("An error occurred while fetching the weather data. Please try again.");
+    await _0x1330dc("An error occurred while fetching the weather data. Please try again.");{
         contextInfo: {
         externalAdReply: {
           title: "𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒",
