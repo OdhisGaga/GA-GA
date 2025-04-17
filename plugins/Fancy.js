@@ -22,10 +22,10 @@ zokou({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, zk
         return await repondre('_Une erreur s\'est produite ,(_');{
      contextInfo: {
         externalAdReply: {
-          title: "Error Fetching Fancy Passage",
+          title: "𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒",
           body: "Please try again later.",
-          thumbnailUrl: "", // Replace with a suitable thumbnail URL
-          sourceUrl:  '',
+          thumbnailUrl: "https://files.catbox.moe/sfk02i.jpg", // Replace with a suitable thumbnail URL
+          sourceUrl:  'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
           mediaType: 1,
           showAdAttribution: true,
         },
