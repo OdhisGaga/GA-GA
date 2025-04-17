@@ -43,4 +43,16 @@ zokou({
     console.error("Error fetching weather data:", _0xa326ac);
     await _0x1330dc("An error occurred while fetching the weather data. Please try again.");
   }
-});
+contextInfo: {
+        externalAdReply: {
+          title: "𝐊𝐄𝐄𝐏 𝐔𝐒𝐈𝐍𝐆 𝐗𝐆𝐀𝐆𝐀 𝐁𝐎𝐓𝐒",
+          body: "Please try again later.",
+          thumbnailUrl: "https://files.catbox.moe/sfk02i.jpg", // Replace with a suitable thumbnail URL
+          sourceUrl:  'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
+          mediaType: 1,
+          showAdAttribution: true,
+        },
+      },
+    });
+  }
+});   
