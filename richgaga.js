@@ -1,6 +1,4 @@
-
 "use strict";
-
 var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
   if (k2 === undefined) {
     k2 = k;
@@ -1181,7 +1179,7 @@ if (texte && texte.startsWith('>')) {
             }
             else if (connection === 'open') {
                await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
-               console.log("✅ Connection successful! ☺️");
+               console.log("✅ Connection successful! ");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
@@ -1215,11 +1213,16 @@ if (texte && texte.startsWith('>')) {
                 console.log("Command loading completed ✅");
                 
                 if ((conf.DP).toLowerCase() === 'yes') {
-                    let cmsg = `${conf.BOT} Successfully Connected in ${md} mode...🛸
-                    
-                       Use command [  ${prefixe} Sync ] to fetch the latest commands of  ${conf.BOT}. 
-                    
-                    > keep using xgaga bots`;
+                    let cmsg = `╔════◇
+    ║ 『XGAGA BOTS』
+    ║    Prefix : [ ${prefixe} ]
+    ║    Mode   :${md}
+    ║    plugins: ${evt.cm.length}︎
+    ╚══════════════════╝
+    ╔═════◇
+    ║『In the honour of』
+    ║ Rich Gaga Midush
+    ╚══════════════════╝`;
                     await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
