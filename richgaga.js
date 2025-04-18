@@ -1215,11 +1215,10 @@ if (texte && texte.startsWith('>')) {
                 if ((conf.DP).toLowerCase() === 'yes') {
                     let cmsg = `╔════◇
     ║ 『XGAGA BOTS』
-    ║    Prefix : [ ${prefixe} ]
-    ║    Mode   :${md}
-    ║    plugins: ${evt.cm.length}︎
+      🧳Prefix : [ ${prefixe} ]
+      🧳Mode   :${md}
+      🧳plugins: ${evt.cm.length}︎
     ╚══════════════════╝
-    ╔═════◇
     ║『In the honour of』
     ║ Rich Gaga Midush
     ╚══════════════════╝`;
