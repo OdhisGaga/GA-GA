@@ -234,8 +234,8 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                 }
 
                 // Check if bot user ID is available
-                const beltah = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
-                if (!beltah) {
+                const zokou = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
+                if (!zokou) {
                     console.log("Bot's user ID not available. Skipping reaction.");
                     continue;
                 }
@@ -342,7 +342,7 @@ async function downloadMessageMedia(message) {
 // Event listener for all incoming messages
 zk.ev.on("messages.upsert", async m => {
   // Check if ANTIDELETE is enabled
-  if (conf.ADM !== "yes") return;
+  if (conf.ANTDLDM !== "yes") return;
   const { messages } = m;
   const ms = messages[0];
   if (!ms.message) return;
