@@ -843,6 +843,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("ℹ️ Gaga is connecting...");
             }
             else if (connection === 'open') {
+                await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
                 console.log("✅ Gaga Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
@@ -860,7 +861,7 @@ zk.ev.on('group-participants.update', async (group) => {
                         }
                         catch (e) {
                             console.log(`${fichier} could not be installed due to : ${e}`);
-                        } /* require(__dirname + "/beltah/" + fichier);
+                        } /* require(__dirname + "/" + fichier);
                          console.log(fichier + " Installed ✔️")*/
                         (0, baileys_1.delay)(300);
                     }
