@@ -1,13 +1,18 @@
 
 {
-  "name":"Xgaga bots",
-  "description":"Best whatsapp bot developed by gaga",
-  "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://files.catbox.moe/sfk02i.jpg",
-  "repository":"https://github.com/OdhisGaga/GA-GA",
-  "succes_url":"/",
-  "stack":"heroku-24",
-  "env":{
+  "name": "Gaga",
+  "description": "Whatsapp device bot made to help Whatsapp users to enjoy while helping..",
+  "keywords": [
+    "bot",
+    "node",
+    "baileys",
+    "whatsapp"
+  ],
+  "logo": "https://files.catbox.moe/sfk02i.jpg",
+  "repository": "https://github.com/OdhisGaga/GA-GA",
+  "succes_url": "/",
+  "stack": "container",
+  "env": {
         "PREFIX": {
       "description": "Choose your bot's prefix",
       "value": ".",
