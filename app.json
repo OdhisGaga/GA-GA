@@ -1,17 +1,13 @@
+
 {
-  "name": "GAGA MD BOTS",
-  "description": "Xgaga bots is a multidevice WhatsApp bot built to make your WhatsApp enjoyable...",
-  "keywords": [
-    "bot",
-    "node",
-    "baileys",
-    "whatsapp"
-  ],
-  "logo": "https://files.catbox.moe/sfk02i.jpg",
-  "repository": "https://github.com/OdhisGaga/GA-GA",
-  "succes_url": "/",
-  "stack": "container",
-  "env": {
+  "name":"BWC-XMD",
+  "description":"Best whatsapp bot developed by KEPHA KINGS",
+  "keywords":["bot","node","baileys","whatsapp"],
+  "logo":"https://files.catbox.moe/6am24p.jpg",
+  "repository":"https://github.com/ekitale/maths-project",
+  "succes_url":"/",
+  "stack":"heroku-24",
+  "env":{
         "PREFIX": {
       "description": "Choose your bot's prefix",
       "value": ".",
