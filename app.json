@@ -132,3 +132,31 @@
       "description": "Set 'yes' to enable bot reactions to messages in private chats",
       "value": "yes",
       "required": false
+    }
+  },
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}
