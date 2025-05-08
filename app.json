@@ -1,11 +1,11 @@
 {
-  "name": "GAGA-MD",
-  "description": "An easy and simple WhatsApp bot",
-  "keywords": ["bot", "node", "baileys", "whatsapp"],
-  "logo": "gaga",
+  "name": "Gaga md",
+  "description": "A Node.js WhatsApp bot.",
   "repository": "https://github.com/OdhisGaga/GA-GA",
-  "succes_url": "/",
   "stack": "heroku-24",
+  "scripts": {
+    "postdeploy": "echo 'Deployment complete!'"
+  },
   "env": {
     "PREFIX": {
       "description": "Choose your bot's prefix",
