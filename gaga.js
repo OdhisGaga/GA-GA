@@ -41,13 +41,13 @@ const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 //import chalk from 'chalk'
 const { verifierEtatJid , recupererActionJid } = require("./data/antilien");
 const { atbverifierEtatJid , atbrecupererActionJid } = require("./data/antibot");
-let evt = require(__dirname + "/timnasa/timoth");
+let evt = require(__dirname + "/framework/zokou");
 const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./data/banUser");
 const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./data/banGroup");
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./data/onlyAdmin");
 //const //{loadCmd}=require("/timnasa/mesfonctions")
-let { reagir } = require(__dirname + "/timnasa/app");
-var session = conf.session.replace(/TIMNASA-MD;;;=>/g,"");
+let { reagir } = require(__dirname + "/framework/app");
+var session = conf.session.replace(/GAGA-MD;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
@@ -57,9 +57,9 @@ const adamsapikey = process.env.BOT_OWNER;
 async function authentification() {
     try {
         //console.log("le data "+data)
-        if (!fs.existsSync(__dirname + "/scan/creds.json")) {
+        if (!fs.existsSync(__dirname + "/auth/creds.json")) {
             console.log("connexion en cour ...");
-            await fs.writeFileSync(__dirname + "/scan/creds.json", atob(session), "utf8");
+            await fs.writeFileSync(__dirname + "/auth/creds.json", atob(session), "utf8");
             //console.log(session)
         }
         else if (fs.existsSync(__dirname + "/scan/creds.json") && session != "zokk") {
@@ -83,7 +83,7 @@ authentification();
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Timnasa-Md', "safari", "1.0.0"],
+            browser: ['Gaga-Md', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -114,10 +114,10 @@ authentification();
    store.bind(zk.ev);
 
 
-// Function to get the current date and time in Tanzania
+// Function to get the current date and time in Kenya
 function getCurrentDateTime() {
     const options = {
-        timeZone: 'Africa/Dar_Es_Salam', // Tanzania time zone
+        timeZone: 'Africa/Nairobi', // kenya time zone
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',
@@ -134,7 +134,7 @@ function getCurrentDateTime() {
 setInterval(async () => {
     if (conf.AUTO_BIO === "yes") {
         const currentDateTime = getCurrentDateTime(); // Get the current date and time
-        const bioText = `Timnasa_Md is running 🚗\n${currentDateTime}`; // Format the bio text
+        const bioText = `Xgaga bot is active🚇\n${currentDateTime}`; // Format the bio text
         await zk.updateProfileStatus(bioText); // Update the bio
         console.log(`Updated Bio: ${bioText}`); // Log the updated bio
     }
@@ -814,7 +814,7 @@ zk.ev.on("messages.upsert", async (m) => {
     if (!ms.message) return;
 
     const origineMessage = ms.key.remoteJid;
-    const baseName = "Timnasa-Md";
+    const baseName = "Gaga-Md";
 
     // Check if the message is from an individual and if contact is not saved
     if (origineMessage.endsWith("@s.whatsapp.net") && (!store.contacts[origineMessage] || !store.contacts[origineMessage].name)) {
@@ -837,7 +837,7 @@ zk.ev.on("messages.upsert", async (m) => {
 
 
 // Default auto-reply message
-let auto_reply_message = "Hello,its Timnasa Md on board. My owner is currently unavailable. Please leave a message, and we will get back to you as soon as possible.";
+let auto_reply_message = "Hello,its Gaga Md on board. My owner is currently unavailable. Please leave a message, and we will get back to you as soon as possible.";
 
 // Track contacts that have already received the auto-reply
 let repliedContacts = new Set();
@@ -923,7 +923,7 @@ zk.ev.on("messages.upsert", async (m) => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./data/sudo");
             const nomAuteurMessage = ms.pushName;
-            const abu1 = '255752593977';
+            const abu1 = '254112291443';
             const abu2 = '255620814108';
             const abu3 = "255764182801";
             const abu4 = '255752593977';
@@ -1160,7 +1160,7 @@ if (conf.AUTO_READ === 'yes') {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Cyberion',
+                                        pack: 'Gaga',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -1258,7 +1258,7 @@ if (conf.AUTO_READ === 'yes') {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'FredieTech',
+                pack: 'Gaga',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -1342,7 +1342,7 @@ if (conf.AUTO_READ === 'yes') {
                          /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage&& conf.PM_PERMIT === "yes" ) {
-                repondre("You don't have acces to commands here") ; return }
+                repondre("Access denied idiot") ; return }
             ///////////////////////////////
 
              
@@ -1523,10 +1523,10 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Timnasa is connecting...");
+                console.log("ℹ️ Gaga is connecting...");
             }
             else if (connection === 'open') {
-                console.log("✅ Timnasa Connected to WhatsApp! ☺️");
+                console.log("✅ Gaga Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
@@ -1535,10 +1535,10 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("Timnasa is Online 🕸\n\n");
                 //chargement des luckycmd 
                 console.log("Loading Timnasa Commands ...\n");
-                fs.readdirSync(__dirname + "/fez").forEach((fichier) => {
+                fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/fez/" + fichier);
+                            require(__dirname + "/plugins/" + fichier);
                             console.log(fichier + " Installed Successfully✔️");
                         }
                         catch (e) {
