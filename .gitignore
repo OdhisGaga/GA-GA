@@ -1,10 +1,6 @@
-node_modules
-/.jpg
-/.mp4
-/.webp
-/set.env
-/store.json
 /auth
+/set.env
 /package-lock.json
+/node_modules
+/store.json
 /audio.mp3
-commandes/img.js
