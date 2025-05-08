@@ -1,164 +1,78 @@
-
 {
-  "name": "Gaga",
-  "description": "Whatsapp device bot made to help Whatsapp users to enjoy while helping..",
+    "name": "GAGA-MD",
+  "version": "2.0.0",
+  "description": "",
+  "main": "gaga.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node gaga.js",
+    "c": "tsc"
+  },
   "keywords": [
     "bot",
-    "node",
-    "baileys",
-    "whatsapp"
+    "Baileys",
+    "Gaga-Md",
+    "whatsapp",
+    "whatsapp-bot",
+    "MidushGaga"
   ],
-  "logo": "https://files.catbox.moe/sfk02i.jpg",
-  "repository": "https://github.com/OdhisGaga/GA-GA",
-  "succes_url": "/",
-  "stack": "container",
-  "env": {
-        "PREFIX": {
-      "description": "Choose your bot's prefix",
-      "value": ".",
-      "required": true
-    },
-    "AUTO_READ_STATUS": {
-      "description": "Your contact status will be read automatically (type 'yes' to activate or 'no' to deactivate; don't write in capital letters)",
-      "value": "yes",
-      "required": false
-    },
-    "GREET": {
-      "description": "when enabled it automatically sends  greeting message to members in your pm",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_LIKE_STATUS": {
-      "description": "Your contact status will be liked automatically (type 'yes' to activate or 'no' to deactivate; don't write in capital letters)",
-      "value": "yes",
-      "required": false
-    },
-    "AUTOBIO": {
-      "description": "This automatically update your bio status.Always make sure you insert your OWNER_NAME since it uses that to update your bio name status",
-      "value": "yes",
-      "required": false
-    },
-    "AUTO_DOWNLOAD_STATUS": {
-      "description": "Your contact status will be downloaded automatically and sent to you (type 'yes' to activate or 'no' to deactivate; don't write in capital letters)",
-      "value": "no",
-      "required": false
-    },
-    "PM_PERMIT": {
-      "description": "Restrict other users from using your bot in private messages (type 'yes' to activate or 'no' to deactivate; don't write in capital letters)",
-      "value": "yes",
-      "required": false
-    },
-    "AUTO_STATUS_MSG": {
-      "description": "type your genuine status message",
-      "value": "eii",
-      "required": false
-    },
-    "AUTO_STATUS_REPLY": {
-      "description": "type your genuine status message",
-      "value": "no",
-      "required": false
-    },
-    "ANTICALL_MSG": {
-      "description": "Type your anticall message to always send when calls are declined.You can as well leave it blank",
-      "value": "",
-      "required": false
-    },
-    "BOT_NAME": {
-      "description": "Change this if you don't like my name",
-      "value": "XGAGA BOTS",
-      "required": true 
-    },
-    "GROUP_CONTROL": {
-      "description": "urs if you want bot yo control group features such as antilink,antispam,antibad",
-      "value": "no",
-      "required": false
-    },
-    "PUBLIC_MODE": {
-      "description": "Set 'yes' to make your bot public or 'no' to keep it private",
-      "value": "yes",
-      "required": false
-    },
-    "HEROKU_API_KEY": {
-      "description": "Insert your Heroku API key (required)",
-      "value": "HRKU-18707818-6061-43a9-a3c2-fec1b0199062",
-      "required": true
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Insert your Heroku app name (required)",
-      "value": "",
-      "required": true
-    },
-    "SESSION_ID": {
-      "description": "Enter your session ID, the code you receive after scanning the QR code",
-      "value": "",
-      "required": true
-    },
-    "OWNER_NAME": {
-      "description": "Insert your name here!!",
-      "value": "",
-      "required": true
-    },
-    "URL": {
-      "description": "Change this image and input yours",
-      "value": "https://files.catbox.moe/sfk02i.jpg",
-      "required": true
-    },
-    "AUTO_READ_MESSAGES": {
-      "description": "yes to activate no to deactivate",
-      "value": "no",
-      "required": false  
-    },
-    "NUMERO_OWNER": {
-      "description": "Your phone number (exclude '+' and area code, e.g., '254729269118')",
-      "value": "254112291443",
-      "required": false
-    },
-    "WARN_COUNT": {
-      "description": "Set the warning limit for warning commands",
-      "value": "2",
-      "required": false
-    },
-    "STARTING_BOT_MESSAGE": {
-      "description": "Set 'yes' to display a starting bot message or 'no' to disable it",
-      "value": "yes",
-      "required": true
-    },
-    "PRESENCE": {
-      "description": "Mark your presence: 1 for online, 2 for typing, 3 for recording, or leave blank for real state",
-      "value": "",
-      "required": false
-    },
-    "ANTI_DELETE_MESSAGE": {
-      "description": "Enable anti-delete message (set 'yes' to activate or 'no' to deactivate)",
-      "value": "yes",
-      "required": false
-    },
-    "ANTICALL": {
-      "description": "Automatically decline incoming calls (set 'on' to activate or 'off' to deactivate)",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_BLOCK": {
-      "description": "Type true if you want bot to automatically  block those who insult you in your dm ",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_REACTION": {
-      "description": "Set 'yes' to enable bot reactions to messages in private chats",
-      "value": "no",
-      "required": false
-      }
-  },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "standard-2x"
-    }
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:essential-0"
-    }
-  ]
+  "author": "Midush Gaga",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@hapi/boom": "^10.0.1",
+    "@types/node": "^18.0.6",
+    "@whiskeysockets/baileys": "github:Luffy2ndAccount/Baileys",
+    "@distube/ytdl-core": "4.14.3",
+    "@xaviabot/fb-downloader": "^1.0.14",     
+    "aptoide-scraper": "^1.0.1",
+    "axios": "^1.4.0",
+      "gifted-dls": "^1.2.9", 
+    "cache-manager": "latest",
+    "canvacord": "^5.4.8",
+    "chal": "^0.0.1-security.0",
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "ffmpeg": "^0.0.4",
+    "wikipedia": "^2.1.1",
+    "file-type": "16.5.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "api-dylux": "^1.6.9",
+    "form-data": "^4.0.1",
+    "fs-extra": "^11.1.1",
+    "g-i-s": "^2.1.7",
+    "gist": "^0.2.0",
+    "genius-lyrics": "^4.4.3", 
+    "google-it": "^1.6.4",
+    "google-tts-api": "latest",
+    "heroku-client": "^3.1.0",
+    "human-readable": "^0.2.1",
+    "javascript-obfuscator": "^4.1.1",
+    "jimp": "^0.16.13", 
+    "latest": "^0.2.0",
+    "link-preview-js": "^3.0.4",
+    "moment-timezone": "^0.5.43",
+    "mumaker": "^2.0.0",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.2.6",
+     "node-catbox": "3.2.0", 
+    "node-id3": "^0.2.6",
+    "acrcloud": "^1.4.0",
+    "pg": "^8.11.2",
+    "pino": "^8.15.0",
+    "qrcode-terminal": "^0.12.0",
+    "readline": "^1.3.0",
+    "sequelize": "^6.32.1",
+    "simple-git": "latest", 
+    "sqlite3": "^5.1.6",
+    "translatte": "^3.0.1",
+    "types": "^0.1.1",
+    "typescript": "^5.1.6",
+    "wa-sticker-formatter": "^4.4.4",
+    "youtube-yts": "^2.0.0",
+    "youtubedl-core": "^4.11.7",
+    "yt-search": "^2.10.4",
+    "france-king": "npm:@distube/ytdl-core@latest"
+  }
 }
-    
