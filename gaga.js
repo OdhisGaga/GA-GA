@@ -849,13 +849,13 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("RAHMAN XMD is Online 🕸\n\n");
+                console.log("Xgaga is Online 🕸\n\n");
                 //chargement des commandes 
                 console.log("Loading Anyway Commands ...\n");
-                fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
+                fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/commandes/" + fichier);
+                            require(__dirname + "/plugins/" + fichier);
                             console.log(fichier + " Installed Successfully✔️");
                         }
                         catch (e) {
