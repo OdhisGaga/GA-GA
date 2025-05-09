@@ -1,11 +1,16 @@
 {
-  "name": "Gaga md",
-  "description": "A Node.js WhatsApp bot.",
+  "name": "gaga",
+  "description": "GBOAT Whatsapp device bot made by TIMOTH TIMNASA to help Whatsapp users to enjoy while helping...",
+  "keywords": [
+    "bot",
+    "node",
+    "baileys",
+    "whatsapp"
+  ],
+  "logo": "gaga",
   "repository": "https://github.com/OdhisGaga/GA-GA",
-  "stack": "heroku-24",
-  "scripts": {
-    "postdeploy": "echo 'Deployment complete!'"
-  },
+  "succes_url": "/",
+  "stack": "container",
   "env": {
     "PREFIX": {
       "description": "Choose your bot's prefix",
