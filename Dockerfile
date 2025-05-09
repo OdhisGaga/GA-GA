@@ -1,4 +1,3 @@
-
 FROM node:lts-buster
 
 RUN apt-get update && \
@@ -10,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/OdhisGaga/GA-GA /root/zokou
-WORKDIR /root/zokou/
+RUN git clone https://github.com/Toputech/Backup-md.git /root/zokou_BOt
+WORKDIR /root/zokou_Bot/
 
 
 COPY package.json .
