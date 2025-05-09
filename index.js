@@ -80,7 +80,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['ALONE-MD', "safari", "1.0.0"],
+            browser: ['GAGA-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -245,7 +245,7 @@ zk.ev.on("messages.upsert", async (m) => {
 
     const model = 'gpt-4-turbo-2024-04-09';
     const userMessage = { role: 'user', content: alpha };  
-    const systemMessage = { role: 'system', content: 'You are called Dullah md. Developed by Ibrahim Adams. You respond to user commands. Only mention developer name if someone asks.' };
+    const systemMessage = { role: 'system', content: 'You are called Gaga. Developed by XgagaMidush. You respond to user commands. Only mention developer name if someone asks.' };
 
     // Add user message and system message to the conversation
     conversationData.push(userMessage);
@@ -339,7 +339,7 @@ zk.ev.on("messages.upsert", async (m) => {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
               newsletterJid: '120363295141350550@newsletter',
-              newsletterName: 'Tech mob project',
+              newsletterName: 'Gaga project',
               serverMessageId: 143},
         externalAdReply: {
           
@@ -1643,15 +1643,15 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                 console.log("ALONE-MD by TOPUTECH installing cmds😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des commandes ...\n");
-                fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
+                fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/commandes/" + fichier);
+                            require(__dirname + "/plugins/" + fichier);
                             console.log(fichier + "Successfully installed ALONE-MD commands✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
-                        } /* require(__dirname + "/commandes/" + fichier);
+                        } /* require(__dirname + "/plugins/" + fichier);
                          console.log(fichier + " installé ✔️")*/
                         (0, baileys_1.delay)(300);
                     }
@@ -1672,7 +1672,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                 await activateCrons();
 
                 if((conf.DP).toLowerCase() === 'no') {     
-                let cmsg = `ALONE-MD  RUNNING ...
+                let cmsg = `GAGA-MD  RUNNING ...
     
     Prefix : [ ${prefixe} ]
     Mode :${md} mode
