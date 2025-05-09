@@ -99,7 +99,7 @@
       "required": false  
     },
     "NUMERO_OWNER": {
-      "description": "Your phone number (exclude '+' and area code, e.g., '255752593977')",
+      "description": "Your phone number (exclude '+' and area code, e.g., '254112291443')",
       "value": "254112291443",
       "required": false
     },
@@ -142,13 +142,12 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "basic"
+      "size": "standard-2x"
     }
   },
-
   "addons": [
     {
-      "plan": "heroku-postgresql"
+      "plan": "heroku-postgresql:essential-0"
     }
   ]
 }
